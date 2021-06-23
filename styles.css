@@ -1,0 +1,91 @@
+		html, body{
+			height: 100%;
+		}
+		.main-top, .main-bottom, .right-top{
+			display: flex;
+		}
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.main{
+			border: 1px solid black;
+			height: 99%;
+			margin: 0 auto;
+			width: 99%;
+		}
+		.main-top{
+			height: 30%;
+		}
+		.main-bottom{
+			height: 70%;
+		}
+		.outside{
+			height: 100%;
+			width: 150px;
+			border: 1px solid #5f9dd6;
+		}
+		.center{
+			width: calc(100% - 300px);
+			height: 100%;
+			border: 1px solid #5f9dd6;
+		}
+		.right, .left{
+			width: 50%;
+		}
+		.right-top{
+			height: 30%;
+		}
+		.right-top-block{
+			height: 100%;
+			border: 1px solid #5f9dd6;
+			width: 60%;
+		}
+		.right-top-block:last-child{
+			width: 40%;
+		}
+		.right-bottom{
+			width: 100%;
+			height: 70%;
+			border: 1px solid #5f9dd6;
+		}
+		.left{
+			border: 1px solid #5f9dd6;
+		}
+
+		@media (max-width: 1024px) and (min-width:  768px){
+			.outside:last-child{
+				display: none;
+			}
+			.center{
+				width: calc(100% - 150px);
+			}
+		}
+		@media (max-width: 768px){
+			/* one by one */
+			.main-top, .main-bottom, .right-top{
+				display: block;
+			}
+			.main-top{
+				height: 90%;
+			}
+			.outside, .center{
+				height: 33%;
+				width: 100%;
+			}
+			.main{
+				border: none;
+			}
+			.main-bottom{
+				height: 210%;
+			}
+			.left, .right{
+				width: 100%;
+				height: 50%;
+			}
+			.right-top-block, .right-top-block:last-child{
+				height: 50%;
+				width: 100%;
+			}
+		}
